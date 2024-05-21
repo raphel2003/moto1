@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Commande de Moto</title>
+   <style>
+      body {
+          background-image: url("gta.webp");
+          background-size: cover;
+          color: aliceblue;
+      }
+
+      input[type="text"][readonly] {
+          border: none;
+          background-color: transparent;
+          font-size: 25px;
+          color: #ffffff;
+          padding: 5px;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <CENTER>
+      <h1><I>Commande</I></h1>
+   </CENTER>
+   <CENTER>
+      <form method="post" action="cmnd.php">
+      <table width="50%" height="100">
+         <tr>
+            <th colspan="3"><input type="text" name="product_name" value="yamaha mt" readonly> <br> </br></th>
+         </tr>
+         <tr>
+            <th rowspan="6"><img src="mt-removebg-preview.png" width="400px" height="250"></th>
+            <th><b>Vendeur: </b></th>
+            <th>BLIDA MOTO</th>
+         </tr>
+         <tr>
+            <th>prix :</b></th>
+            <th>
+               <div style="color: red;">250 milliard</div>
+            </th>
+         </tr>
+         <tr>
+            <th>couleur</th>
+            <th>
+                  <input type="radio" name="couleur" value="noir" checked> noir <br>
+                  <input type="radio" name="couleur" value="blanc"> blanc <br>
+                  <input type="radio" name="couleur" value="vert"> vert <br>
+                  <input type="radio" name="couleur" value="gris"> gris <br>
+            </th>
+         </tr>
+         <tr>
+            <th>option:</th>
+            <th>
+                  <select name="option">
+                     <option value="tout option">tout option </option>
+                     <option value="la base">la base </option>
+                  </select>
+            </th>
+         </tr>
+         <tr>
+            <th>Quantité:</th>
+            <th>
+               <input type="number" name="qnt" min="1" max="5"> 
+            </th>
+         </tr>
+         <tr>
+            <th colspan="2"><br>
+               <input type="submit" name="commande_1" value="Commander"> 
+            </th>
+         </tr>
+      </table>
+   </CENTER>
+   </form>
+</body>
+</html>

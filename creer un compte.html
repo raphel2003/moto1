@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Créer un compte</title>
+   <script>
+      function validInformations() {
+         var nom = document.getElementById("nom").value;
+         var prenom = document.getElementById("prenom").value;
+         var age = document.getElementById("age").value;
+         var tel = document.getElementById("tel").value;
+         var adresse = document.getElementById("adr").value;
+         var motPasse = document.getElementById("mot_passe").value;
+         var confMotPasse = document.getElementById("conf_mot_passe").value;
+         var sexe = document.querySelector('input[name="sexe"]:checked');
+         var wilaya = document.getElementById("Wilayae").value;
+
+         if (nom === "" || prenom === "" || age === "" || tel === "" || adresse === "" || motPasse === "" || confMotPasse === "" || !sexe || wilaya === "") {
+            alert("Veuillez remplir tous les champs.");
+            return false;
+         }
+
+         if (age < 18 || age > 100) {
+            alert("Veuillez entrer un âge valide (entre 18 et 100).");
+            return false;
+         }
+
+         if (!(tel.length === 10 || tel.length === 9)) {
+            alert("Le numéro de téléphone doit contenir 9 ou 10 chiffres.");
+            return false;
+         }
+
+         if (motPasse !== confMotPasse) {
+            alert("Les mots de passe ne correspondent pas.");
+            return false;
+         }
+
+         if (!confirm("Confirmez-vous vos informations ?")) {
+            return false;
+         }
+
+         return true;
+      }
+   </script>
+</head>
+
+<body>
+   <center>
+      <h2 style="color: yellow; font-size: 250%;">Créer un compte</h2>
+   </center><br>
+
+   <style>
+      body {
+         background-image: url(121.jpg);
+         background-size: cover;
+      }
+
+      table {
+         position: relative;
+         top: 50px;
+         right: 300px;
+      }
+   </style>
+   <center>
+      <form action="insc.php" method="post"  onsubmit="return validInformations();">
+         <table width="60%" hight="200%">
+            <tr>
+               <th>Nom :</th>
+               <td><input id="nom" type="text" name="nom"></td>
+            </tr>
+            <tr>
+               <th>Prénom :</th>
+               <td><input id="prenom" type="text" name="prenom"></td>
+            </tr>
+            <tr>
+               <th>Âge :</th>
+               <td><input id="age" type="number" name="age" min="18" max="100"></td>
+            </tr>
+            <tr>
+               <th>Wilaya :</th>
+               <td>
+                  
+                     <select id="Wilayae" name="Wilaya">
+                        <option value="adrar">Adrar</option>
+                        <option value="chlef">Chlef</option>
+                        <option value="laghouat">Laghouat</option>
+                        <option value="oum el bouaghi">Oum El Bouaghi</option>
+                        <option value="batna">Batna</option>
+                        <option value="béjaïa">Béjaïa</option>
+                        <option value="biskra">Biskra</option>
+                        <option value="béchar">Béchar</option>
+                        <option value="blida">Blida</option>
+                        <option value="bouira">Bouira</option>
+                        <option value="tamanrasset">Tamanrasset</option>
+                        <option value="tébessa">Tébessa</option>
+                        <option value="tlemcen">Tlemcen</option>
+                        <option value="tiaret">Tiaret</option>
+                        <option value="tizi ouzou">Tizi Ouzou</option>
+                        <option value="alger">Alger</option>
+                        <option value="djelfa">Djelfa</option>
+                        <option value="jijel">Jijel</option>
+                        <option value="setif">Sétif</option>
+                        <option value="saïda">Saïda</option>
+                        <option value="skikda">Skikda</option>
+                        <option value="sidi bel abbès">Sidi Bel Abbès</option>
+                        <option value="annaba">Annaba</option>
+                        <option value="guelma">Guelma</option>
+                        <option value="constantine">Constantine</option>
+                        <option value="médéa">Médéa</option>
+                        <option value="mostaganem">Mostaganem</option>
+                        <option value="msila">Msila</option>
+                        <option value="mascara">Mascara</option>
+                        <option value="ouargla">Ouargla</option>
+                        <option value="oran">Oran</option>
+                        <option value="el bayadh">El Bayadh</option>
+                        <option value="illizi">Illizi</option>
+                        <option value="bordj bou arreridj">Bordj Bou Arréridj</option>
+                        <option value="boumerdès">Boumerdès</option>
+                        <option value="el tarf">El Tarf</option>
+                        <option value="tindouf">Tindouf</option>
+                        <option value="tissemsilt">Tissemsilt</option>
+                        <option value="el oued">El Oued</option>
+                        <option value="khenchela">Khenchela</option>
+                        <option value="souk ahras">Souk Ahras</option>
+                        <option value="tipaza">Tipaza</option>
+                        <option value="mila">Mila</option>
+                        <option value="aïn defla">Aïn Defla</option>
+                        <option value="naâma">Naâma</option>
+                        <option value="aïn témouchent">Aïn Témouchent</option>
+                        <option value="ghardaïa">Ghardaïa</option>
+                        <option value="relizane">Relizane</option>
+                    </select>
+                    
+               </td>
+            </tr>
+            <tr>
+               <th>Téléphone :</th>
+               <td><input id="tel" type="number" name="tel"></td>
+            </tr>
+            <tr>
+               <td colspan="2" id="a1" align="center" style="color: red; font-weight: bold;"></td>
+            </tr>
+            <tr>
+               <th>Adresse :</th>
+               <td><textarea id="adr" name="address" cols="20" rows="5"></textarea></td>
+            </tr>
+            <tr>
+               <th>Mot de passe :</th>
+               <td><input id="mot_passe" type="password" name="mot_passe"></td>
+            </tr>
+            <tr>
+               <th>Confirmer le mot de passe :</th>
+               <td><input id="conf_mot_passe" type="password" name="conf_mot_passe"></td>
+            </tr>
+            <tr>
+               <th>Sexe :</th>
+               <td>
+                  <input id="sexe_homme" type="radio" name="sexe" value="homme" checked> Homme
+                  <input id="sexe_femme" type="radio" name="sexe" value="femme"> Femme
+               </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><br>
+                  <input type="submit" name="submit" value="Envoyer">
+                  <input type="reset" value="Effacer" onclick="return confirm('Voulez-vous effacer vos données ?');">
+               </td>
+            </tr>
+         </table>
+      </form>
+   </center>
+</body>
+
+</html>

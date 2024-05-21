@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<head>
+    <title>login </title> 
+    
+
+
+<style>
+body{
+    background-image: url(gta3.jpeg);
+    background-size: cover;
+   color : #ffffff;
+   
+}
+button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+
+
+</style>
+
+
+</head>
+
+    <script>
+        function validation_login()
+        {
+            var a=document.getElementById("emailaddress"); 
+            var b=document.getElementById("mot_passe");
+            var x=a.value;
+            var y=b.value;
+
+        
+
+        if(x==="" && y===""){
+            alert("entre vos informations");
+        return false;
+          }
+        if(x===""){
+            alert("entre votre email");
+        return false;
+          }
+
+        if(y===""){
+            alert("entre votre mot passe");
+        return false;
+         }}
+    
+    </script>
+    <body>
+    <CENTER>
+        <h1 style="font-size: 250%;"><I>BIENVENUS</I></h1>
+    </CENTER>
+    <CENTER style="font-size: 125%;"><img src="login-removebg-preview.png"></CENTER>
+    <CENTER>
+        <form method="post" action="esse.php">
+                <table style="font-size: 200%;">
+                    <tr>
+                        <td >E-mail: <br></td>
+                        <td><input id="emailaddress" type="text" name="emailaddress" size="20"><br></td>
+                        
+                    
+                    </tr>
+                    <br>
+                    <tr>
+                        <td style="color: rgb(25, 14, 12);font-size: 100%;">Mot passe:<br></td>
+                        <td><input id="mot_passe" type="password" name="mot_passe" size="20"><br></td>
+                    </tr>
+                    <tr>
+                        <br>
+                        <th><input type="submit" name="submit" value="Envoyer" onclick="validation_login();"></input>
+                        <th><input type="reset" name="effacer"value="effacer"></input>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br>
+                            <a style="color: #b6b62e;margin-left: 70px;" href="creer un compte.html">S'inscrer</a>
+                        </td>
+                    </tr>
+                </table>
+ 
+
+
+
+
+            </from>
+</body>
